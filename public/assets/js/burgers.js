@@ -7,7 +7,7 @@ $(function() {
     console.log("button change-dev id=" + burgerid)
     var newEatState = {
       id: burgerid,
-      devoured: true
+      devoured: 1
     };
 
     // Send the PUT request.

@@ -60,13 +60,15 @@ var orm = {
   //   });
   // }
   createOne: function(table, cols, vals, cb) {
+    console.log("createone");
+    
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    // queryString += printQuestionMarks(vals.length);
+    queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
     console.log(queryString);
