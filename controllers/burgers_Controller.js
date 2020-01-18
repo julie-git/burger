@@ -18,16 +18,16 @@ router.get("/", function(req, res) {
   });
   
   router.post("/api/burgers", function(req, res) {
-    console.log("post api burgers");
-    console.log(req.body.burger_name);
+    // console.log("post api burgers");
+    // console.log(req.body.burger_name);
     
     burger.createOne([
       "burger_name"
     ], [
       req.body.burger_name
     ], function(result) {
-      console.log("bg_control result of post api/burgers");
-      console.log(result);
+      // console.log("bg_control result of post api/burgers");
+      // console.log(result);
       // Send back the ID of the new burger
       res.json({ id: result.insertId });
     });
@@ -53,19 +53,7 @@ router.get("/", function(req, res) {
     });
   });
   
-  
-  //   burger.updateOne({
-  //     devoured: req.body.devoured
-  //   }, condition, function(result) {
-  //     if (result.changedRows == 0) {
-  //       // If no rows were changed, then the ID must not exist, so 404
-  //       return res.status(404).end();
-  //     } else {
-  //       res.status(200).end();
-  //     }
-  //   });
-  // });
-  
+    
 //   router.delete("/api/cats/:id", function(req, res) {
 //     var condition = "id = " + req.params.id;
   

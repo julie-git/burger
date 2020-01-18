@@ -10,9 +10,15 @@ body{
   margin: 200px auto;
   padding-bottom: 5% ;
 }
-
+.addburger button{
+  background: red;
+  height: 50px;
+  width: 100px;
+  color: white;
+}
 .devoured{
   background: yellow;
+  padding: 0px 25px 0px 25px;
 }
 .devoured h2{
   background: yellow;

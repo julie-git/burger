@@ -3,8 +3,8 @@ $(function() {
   $(".change-devour").on("click", function(event) {
     var burgerid = $(this).data("id");
     var newDevoured = $(this).data("newdevoured");
-    console.log("change-devour" + newDevoured);
-    console.log("button change-dev id=" + burgerid)
+    // console.log("change-devour" + newDevoured);
+    // console.log("button change-dev id=" + burgerid)
     var newEatState = {
       id: burgerid,
       devoured: 1
@@ -16,7 +16,7 @@ $(function() {
       data: newEatState
     }).then(
       function() {
-        console.log("changed newEatState to", newDevoured);
+        // console.log("changed newEatState to", newDevoured);
         // Reload the page to get the updated list
         location.reload();
       }
