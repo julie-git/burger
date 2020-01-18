@@ -11,27 +11,36 @@ router.get("/", function(req, res) {
       var hbsObject = {
         burger: data
       };
+      console.log("router get / hbsobject");
       console.log(hbsObject);
       res.render("index", hbsObject);
     });
   });
   
   router.post("/api/burgers", function(req, res) {
-    burger.insertOne([
+    console.log("post creatone");
+    console.log(req.body.name);
+    console.log(req.body.devoured);
+    burger.createOne([
       "burger_name", "devoured"
     ], [
       req.body.name, req.body.devoured
     ], function(result) {
-      // Send back the ID of the new quote
+      console.log("bg_control result of post api/burgers");
+      console.log(result);
+      // Send back the ID of the new burger
       res.json({ id: result.insertId });
     });
   });
   
   router.put("/api/burgers/:id", function(req, res) {
-    var condition = "id = " + req.params.id;
+    // var conditionId = "id";
+     var condition = "id = " + req.params.id;
+    // var conditionVal = req.params.id;
+    // var conditionCol = "id = " + req.params.id;
   
     console.log("condition", condition);
-  
+
     burger.updateOne({
       devoured: req.body.devoured
     }, condition, function(result) {
@@ -43,6 +52,19 @@ router.get("/", function(req, res) {
       }
     });
   });
+  
+  
+  //   burger.updateOne({
+  //     devoured: req.body.devoured
+  //   }, condition, function(result) {
+  //     if (result.changedRows == 0) {
+  //       // If no rows were changed, then the ID must not exist, so 404
+  //       return res.status(404).end();
+  //     } else {
+  //       res.status(200).end();
+  //     }
+  //   });
+  // });
   
 //   router.delete("/api/cats/:id", function(req, res) {
 //     var condition = "id = " + req.params.id;
