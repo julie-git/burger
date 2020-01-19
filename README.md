@@ -9,6 +9,7 @@
 
 * Your app will store every burger in a database, whether devoured or not.
 
+![Eat-Da-Burger](./public/assets/images/eatdaburger.jpg)
 Tech Specs: 
 This app logs burgers you have eaten with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). It follows the MVC design pattern; 
 uses Node and MySQL to query and route data in the app, and Handlebars to generate the HTML.

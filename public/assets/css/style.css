@@ -26,7 +26,9 @@ body{
 
 .noteaten{
   background: yellowgreen;
+  padding: 0px 25px 0px 25px;
 }
+
 .noteaten h2{
   background: yellowgreen;
 }
